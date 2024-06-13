@@ -3,10 +3,11 @@ from PrimeFactors import *
 
 
 class Test(TestCase):
+    def setUp(self):
+        self.primeFactors = PrimeFactors()
+
     def test_get_prime_factors_1(self):
-        p = PrimeFactors()
-        self.assertEqual([], p.of(1))
+        self.assertEqual([], self.primeFactors.of(1))
 
     def test_get_prime_factors_2(self):
-        p = PrimeFactors()
-        self.assertEqual([2], p.of(2))
+        self.assertEqual([2], self.primeFactors.of(2))
