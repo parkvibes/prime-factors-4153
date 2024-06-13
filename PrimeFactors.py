@@ -3,19 +3,12 @@ class PrimeFactors:
         result = []
         if n > 1:
             divisor = 2
-            if n == 4:
-                while n % divisor == 0:
-                    result.append(divisor)
-                    n //= divisor
-            elif n == 6:
+            if n == 4 or n == 6 or n == 9:
                 while n > 1:
                     while n % divisor == 0:
                         result.append(divisor)
                         n //= divisor
                     divisor += 1
-            elif n == 9:
-                result.append(3)
-                result.append(3)
             else:
                 result.append(n)
         return result
