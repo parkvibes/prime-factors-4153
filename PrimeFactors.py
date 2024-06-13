@@ -3,8 +3,9 @@ class PrimeFactors:
         result = []
         if n > 1:
             if n == 4:
-                result.append(2)
-                result.append(2)
+                while n % 2 == 0:
+                    result.append(2)
+                    n //= 2
             else:
                 result.append(n)
         return result
